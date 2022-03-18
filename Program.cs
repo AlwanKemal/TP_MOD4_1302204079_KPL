@@ -10,6 +10,16 @@ namespace TP_MOD4_1302204079_KPL
     {
         static void Main(string[] args)
         {
+            HaloGeneric<string> halo = new HaloGeneric<string>();
+            String x = "Alwan Kemal";
+            halo.SapaUser(x);
+        }
+    }
+    public class HaloGeneric<T>
+    {
+        public void SapaUser(T x)
+        {
+            Console.WriteLine("halo"+x);
         }
     }
 }
