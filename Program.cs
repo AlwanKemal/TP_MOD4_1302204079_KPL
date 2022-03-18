@@ -10,11 +10,20 @@ namespace TP_MOD4_1302204079_KPL
     {
         static void Main(string[] args)
         {
+            HaloGeneric<string> halo = new HaloGeneric<string>();
+            String x = " Alwan Kemal";
+            halo.SapaUser(x);
             DataGeneric<String> data = new DataGeneric<string>("1302204079");
             data.PrintData();
         }
     }
-    
+    public class HaloGeneric<T>
+    {
+        public void SapaUser(T x)
+        {
+            Console.WriteLine("halo"+x);
+        }
+    }
     public class DataGeneric<T>
     {
         private T data;
@@ -24,7 +33,7 @@ namespace TP_MOD4_1302204079_KPL
         }
         public void PrintData()
         {
-            Console.WriteLine("data yang tersimpan adalah: " + this.data);
+            Console.WriteLine("data yang tersimpan adalah: " +this.data);
         }
     }
 }
